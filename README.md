@@ -193,6 +193,12 @@
       const files = Array.from(dt.files).filter(f=>f.type.startsWith('audio'));
       for(const f of files){ tracks.push({ title:f.name, artist:'Local', objectURL: URL.createObjectURL(f) }); }
       renderPlaylist(); if(!audio.src) playIndex();
+
+
+      fetch("https://raw.githubusercontent.com/tuusuario/crewonthebeats-radio/main/crewonthebeats_playlist.json")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
     });
 
     // Limpiar playlist
