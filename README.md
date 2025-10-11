@@ -169,7 +169,7 @@
 
     document.getElementById('btnLoad').onclick = ()=>{
       const url = document.getElementById('playlistUrl').value.trim();
-      if(!url) return alert('Pega la URL pública de playlist.json');
+      if(!url) return alert('[Pega la URL pública de playlist.json](https://raw.githubusercontent.com/crewonthebeats/crewonthebeats/refs/heads/main/crewonthebeats_playlist.json)');
       loadPlaylistFromUrl(url);
     }
 
